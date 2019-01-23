@@ -23,6 +23,9 @@ namespace AlgorithmsDataStructures
 
 		public int HashFun(string key)
 		{
+		  if (key == null)
+		    return -1;
+
 			int sumBytes = 0;
 			byte[] valuesBytes = Encoding.UTF8.GetBytes(key);
 
@@ -75,6 +78,9 @@ namespace AlgorithmsDataStructures
 
 		public void Put(string key, T value)
 		{
+      if(key == null)
+        return;
+
 			int position = SeekPosition(key);
 
 			if (slots[position] == null)
