@@ -96,7 +96,7 @@ namespace AlgorithmsDataStructures
 
 			int position = FindKeyPosition(key);
 
-			return slots[position] != null ? values[position] : default(T);
+			return position != -1 && slots[position] != null ? values[position] : default(T);
 		}
 	}
 }
